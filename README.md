@@ -2,17 +2,25 @@
 
 ## Probability of Default Prediction using Machine Learning
 
-This project develops an end-to-end **Probability of Default (PD)** prediction model using the **UCI Default of Credit Card Clients** dataset. The objective is to identify customers who are likely to default on their credit card payments by leveraging machine learning techniques and interpretable financial features.
+This project develops an end-to-end **Probability of Default (PD) modelling framework** using the **UCI Default of Credit Card Clients** dataset.
 
-The project covers the complete machine learning workflow, including data validation, SQL-based business analysis, feature engineering, model development, hyperparameter optimization, and model explainability using SHAP.
+The objective is to estimate the probability that a credit-card customer will default on their next payment and to evaluate whether the resulting model performs consistently across different customer segments.
+
+The project combines **SQL-based business analysis, statistical testing, feature engineering, machine learning, hyperparameter optimization, model validation, segment-level performance analysis, and SHAP-based explainability**.
+
+---
 
 ---
 
 ## Project Overview
 
-Financial institutions face significant financial losses due to customer defaults. Early identification of high-risk borrowers enables better lending decisions, improved portfolio management, and more effective credit risk mitigation.
+Credit-card defaults represent a significant source of credit risk for financial institutions. Identifying customers with a higher probability of default can support better risk assessment and portfolio-level decision-making.
 
-This project builds and compares multiple machine learning models to predict the probability of customer default while maintaining model interpretability for practical decision-making.
+This project develops and compares multiple machine learning models for default prediction and evaluates their ability to distinguish between defaulting and non-defaulting customers.
+
+The analysis also examines whether model performance remains reasonably consistent across different customer segments such as age, credit limit, credit utilization, and repayment behaviour.
+
+---
 
 ---
 
@@ -72,6 +80,21 @@ Model Evaluation
         ▼
 Model Interpretation
 (SHAP)
+        │
+        ▼
+Probability of Default (PD)
+        │
+        ▼
+Model Validation
+• ROC-AUC
+• PR-AUC
+• Recall
+• Precision
+• F1-Score
+• Confusion Matrix
+        │
+        ▼
+Segment-Level Performance Analysis
 ```
 
 ---
@@ -115,7 +138,7 @@ The models were evaluated using:
 - ROC-AUC
 - Precision-Recall AUC (PR-AUC)
 
-Since credit default prediction is an imbalanced classification problem, **PR-AUC** was considered the primary model selection metric.
+Since credit default prediction is an imbalanced classification problem, **PR-AUC** was considered the primary model selection metric. Other metrics that were considered - ROC-AUC, recall
 
 ---
 
